@@ -1,4 +1,4 @@
 <mat-form-field class="inputtag">
-    <mat-label >{{lablename}}</mat-label>
-    <input matInput type={{type}} placeholder="{{placeholder}}" name={{name}}>
-  </mat-form-field>
+    <mat-label >{{labelName}}</mat-label>
+    <input #field matInput  [value]="controlName" [type]="type" (change)="updateInputField(field.value)">
+</mat-form-field>

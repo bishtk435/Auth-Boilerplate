@@ -2,14 +2,15 @@
     <div class="col-md-4 col-sm-12"></div>
     <div class="col-md-4 col-sm-12">
         <div class="container" style="background-color: aqua;">
-            <form>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col-md-12">
-                        <app-input-field lablename="Email" type="email" name="username" placeholder="Email"></app-input-field>
+                        <app-input-field formControlName="email" [labelName]="'Email'" [type]="'text'"></app-input-field>
                     </div>
                     <div class="col-md-12">
-                        <app-input-field lablename="Password" type="password" name="pasword" placeholder="Password"></app-input-field>
+                        <app-input-field formControlName="password" [labelName]="'Password'" [type]="'password'"></app-input-field>
                     </div>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>
