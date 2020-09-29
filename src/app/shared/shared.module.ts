@@ -19,7 +19,9 @@ import { RadioComponent } from './radio/radio.component';
     MatInputModule,
     MatIconModule,
     MatButtonModule,
-    MatRadioModule
+    MatRadioModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     InputFieldComponent,
@@ -28,7 +30,9 @@ import { RadioComponent } from './radio/radio.component';
     MatButtonModule,
     ButtonComponent,
     MatRadioModule,
-    RadioComponent
+    RadioComponent,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

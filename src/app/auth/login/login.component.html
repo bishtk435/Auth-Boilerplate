@@ -4,13 +4,13 @@
         <div class="container">
             <img src="assets/inages/login.jpg" alt="">
             <h1>Login Here...</h1>
-            <form>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col-md-12">
-                        <app-input-field lablename="Email" iconname="email" type="email" name="username" placeholder="Email" ></app-input-field>
+                        <app-input-field [iconName]="'email'" formControlName="email" [labelName]="'Email'" [type]="'text'"></app-input-field>
                     </div>
                     <div class="col-md-12">
-                        <app-input-field lablename="Password" iconname="lock" type="password" name="password" placeholder="Password" ></app-input-field>
+                        <app-input-field [iconName]="'lock'" formControlName="password" [labelName]="'Password'" [type]="'password'" ></app-input-field>
                     </div>
                 </div>
                 <div class="col-md-12">
