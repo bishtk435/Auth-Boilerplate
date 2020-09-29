@@ -8,9 +8,5 @@
     font-size: 20px !important;
 }
 .mtlabel{
-    /* color: #fff !important; */
     font-family: 'Times New Roman', Times, serif;
-}
-::placeholder{
-    color: #fff !important;
 }
