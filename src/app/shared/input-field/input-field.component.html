@@ -1,4 +1,8 @@
-<mat-form-field class="inputtag">
-    <mat-label >{{lablename}}</mat-label>
-    <input matInput type={{type}} placeholder="{{placeholder}}" name={{name}}>
-  </mat-form-field>
+<div class="mat-typography">
+    <mat-form-field>
+        <mat-label class="mtlabel">
+            <mat-icon class="myicon">{{iconname}}</mat-icon>&nbsp;{{lablename}}
+        </mat-label>
+        <input matInput type={{type}} placeholder="{{placeholder}}" name={{name}}>
+    </mat-form-field>
+</div>

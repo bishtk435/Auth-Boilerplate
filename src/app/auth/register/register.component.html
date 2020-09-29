@@ -1,1 +1,40 @@
-<p>register works!</p>
+<div class="container">
+    <h1>Register Here...</h1>
+    <div class="row w-100 d-flex">
+        <div class="col-md-6 col-sm-12">
+            <app-input-field lablename="First Name" iconname="person" type="text" name="fname" placeholder="First Name">
+            </app-input-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <app-input-field lablename="Last Name" iconname="person" type="text" name="lname" placeholder="Last Name">
+            </app-input-field>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <app-input-field lablename="UserName" iconname="person" type="text" name="username" placeholder="User Name">
+            </app-input-field>
+        </div>
+        <div class="col-md-12 col-sm-12">
+            <app-input-field lablename="Email" iconname="email" type="email" name="email" placeholder="Email">
+            </app-input-field>
+        </div>
+        <div class="col-md-6" style="display: inline-block;">
+            <app-radio name="Male" value="Male" style="display: inline-block;"></app-radio>&nbsp;&nbsp;&nbsp;
+            <app-radio name="Female" value="Female" style="display: inline-block;"></app-radio>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <app-input-field lablename="DOB" iconname="lock" type="text" name="dob"
+                placeholder="DD-MM-YYYY"></app-input-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <app-input-field lablename="Password" iconname="lock" type="password" name="password"
+                placeholder="Password"></app-input-field>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <app-input-field lablename="Conform Password" iconname="lock" type="password" name="password1"
+                placeholder="Comfrom Password"></app-input-field>
+        </div>
+        <div class="col-md-12">
+            <app-button btnname="Register"></app-button>
+        </div>
+    </div>
+</div>

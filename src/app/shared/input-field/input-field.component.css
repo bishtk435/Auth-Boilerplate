@@ -1,3 +1,16 @@
-.inputtag{
+.mat-form-field{
     width: 100%;
+    /* color: #fff !important; */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+.mat-display-1{
+    font-size: 20px !important;
+}
+.mtlabel{
+    /* color: #fff !important; */
+    font-family: 'Times New Roman', Times, serif;
+}
+::placeholder{
+    color: #fff !important;
 }

@@ -1,14 +1,19 @@
 <div class="row w-100 d-flex">
-    <div class="col-md-4 col-sm-12"></div>
-    <div class="col-md-4 col-sm-12">
-        <div class="container" style="background-color: aqua;">
+    <div class="col-md-3 col-sm-12"></div>
+    <div class="col-md-6 col-sm-12">
+        <div class="container">
+            <img src="assets/inages/login.jpg" alt="">
+            <h1>Login Here...</h1>
             <form>
                 <div class="row">
                     <div class="col-md-12">
-                        <app-input-field lablename="Email" type="email" name="username" placeholder="Email"></app-input-field>
+                        <app-input-field lablename="Email" iconname="email" type="email" name="username" placeholder="Email"></app-input-field>
                     </div>
                     <div class="col-md-12">
-                        <app-input-field lablename="Password" type="password" name="pasword" placeholder="Password"></app-input-field>
+                        <app-input-field lablename="Password" iconname="lock" type="password" name="pasword" placeholder="Password"></app-input-field>
+                    </div>
+                    <div class="col-md-12">
+                        <app-button btnname="Login"></app-button>
                     </div>
                 </div>
             </form>

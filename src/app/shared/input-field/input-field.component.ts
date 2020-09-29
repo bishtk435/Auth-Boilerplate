@@ -10,6 +10,7 @@ export class InputFieldComponent implements OnInit {
   @Input() name: string;
   @Input() placeholder: string;
   @Input() lablename: string;
+  @Input() iconname: string;
 
   constructor() { }
 
