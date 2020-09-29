@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { InputFieldComponent } from './input-field/input-field.component';
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -11,12 +12,14 @@ import { InputFieldComponent } from './input-field/input-field.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule
   ],
   exports: [
     InputFieldComponent,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    MatInputModule
+  ],
 })
 export class SharedModule { }
