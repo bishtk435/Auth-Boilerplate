@@ -8,6 +8,9 @@ import { InputFieldComponent } from './input-field/input-field.component';
   declarations: [InputFieldComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    InputFieldComponent
   ]
 })
 export class SharedModule { }
