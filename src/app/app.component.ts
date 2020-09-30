@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { logIn } from './auth/auth.actions';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Auth Boilerplate';
+
+  constructor(private store: Store<{isLoggedIn: boolean}>) {}
+
 }

@@ -7,17 +7,32 @@
             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
                 <div class="row">
                     <div class="col-md-12">
-                        <app-input-field [iconName]="'email'" formControlName="email" [labelName]="'Email'" [type]="'text'"></app-input-field>
+                        <app-input-field
+                         [iconName]="'email'"
+                         formControlName="email" 
+                         [labelName]="'Email'" 
+                         [type]="'text'" 
+                         email
+                        >
+                        </app-input-field>
                     </div>
                     <div class="col-md-12">
-                        <app-input-field [iconName]="'lock'" formControlName="password" [labelName]="'Password'" [type]="'password'" ></app-input-field>
+                        <app-input-field 
+                          [iconName]="'lock'" 
+                          formControlName="password" 
+                          [labelName]="'Password'" 
+                          [type]="'password'" 
+                        >
+                        </app-input-field>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <app-button btnname="Login"></app-button>
                 </div>
-                
             </form>
+            <div class="col-md-12">
+                <app-button routerLink="/register" btnname="Register"></app-button>
+            </div>
         </div>
     </div>
 </div>

@@ -22,3 +22,7 @@ img{
     margin-right: auto;
     margin-bottom: 20px;
 }
+
+.ng-invalid:not(form) {
+    color: red;
+}

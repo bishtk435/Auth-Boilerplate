@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, forwardRef } from '@angular/core';
+import { Component, Input, OnInit, forwardRef, AfterContentChecked } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -13,31 +13,34 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ]
 })
-export class InputFieldComponent implements OnInit {
+export class InputFieldComponent implements OnInit, AfterContentChecked {
 
   @Input() type: string;
   @Input() labelName: string;
   @Input() iconName: string;
 
-    writeValue(value: any): void {
-    }
+  fieldValue: string;
 
-    propagateChange = (_: any) => {
-    }
+  writeValue(value: any): void {
+  }
 
-    registerOnChange(fn): void{
-      this.propagateChange = fn;
-    }
+  propagateChange = (_: any) => {
+  }
 
-    registerOnTouched(): void{
-    }
+  registerOnChange(fn): void{
+    this.propagateChange = fn;
+  }
+
+  registerOnTouched(): void{
+  }
 
   constructor() { }
 
   ngOnInit(): void {
+    this.propagateChange(this.fieldValue);
   }
 
-  updateInputField(newValue): void{
-    this.propagateChange(newValue);
+  ngAfterContentChecked(): void {
+    this.propagateChange(this.fieldValue);
   }
 }
