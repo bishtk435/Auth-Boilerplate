@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-input-field',
@@ -14,13 +14,12 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class InputFieldComponent implements OnInit {
-  @Input() controlName: string;
+
   @Input() type: string;
   @Input() labelName: string;
   @Input() iconName: string;
 
     writeValue(value: any): void {
-     this.controlName = value;
     }
 
     propagateChange = (_: any) => {
@@ -39,7 +38,6 @@ export class InputFieldComponent implements OnInit {
   }
 
   updateInputField(newValue): void{
-    this.controlName = newValue;
-    this.propagateChange(this.controlName);
+    this.propagateChange(newValue);
   }
 }

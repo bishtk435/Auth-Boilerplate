@@ -3,6 +3,6 @@
         <mat-label class="mtlabel">
             <mat-icon class="myicon">{{iconName}}</mat-icon>&nbsp;{{labelName}}
         </mat-label>
-        <input matInput #field [type]="type" [value]="controlName" (change)="updateInputField(field.value)">
+        <input matInput #field [type]="type" (change)="updateInputField(field.value)">
     </mat-form-field>
 </div>

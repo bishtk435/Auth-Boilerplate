@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void{
     console.log('this is form submit');
-    console.log('this is in form: ', this.loginForm);
+    console.log('this is in form: ', this.loginForm.value);
   }
-  
 }
