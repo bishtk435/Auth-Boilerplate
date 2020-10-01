@@ -1,14 +1,14 @@
 import { Action, createReducer, on } from '@ngrx/store';
 
-import { logInSuccess } from './auth/auth.actions';
+import { afterLoginRequest } from './auth/auth.actions';
 
-const initialState = false;
+const initialState = {isLoggedIn: '0'};
 
 const _loginReducer = createReducer(
     initialState,
-    on(logInSuccess, (state) => state = true)
+    on(afterLoginRequest, (state, {response}) => ({...state, isLoggedIn: response}) )
 );
 
-export const loginReducer = (state: boolean, action: Action): any => {
+export const loginReducer = (state: any, action: Action): any => {
     return _loginReducer(state, action);
 };

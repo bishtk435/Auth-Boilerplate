@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { loginReducer } from './app.reducer';
 import { LoginEffect } from './auth/login/login.effects';
 
+
 @NgModule({
   declarations: [
     AppComponent
