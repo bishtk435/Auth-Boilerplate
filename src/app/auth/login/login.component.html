@@ -4,25 +4,16 @@
         <div class="container">
             <img src="assets/inages/login.jpg" alt="">
             <h1>Login Here...</h1>
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                     <div class="col-md-12">
-                        <app-input-field
-                         [iconName]="'email'"
-                         formControlName="email" 
-                         [labelName]="'Email'" 
-                         [type]="'text'" 
-                         email
-                        >
+                        <app-input-field [iconName]="'email'" formControlName="email" [labelName]="'Email'"
+                            [type]="'text'" email>
                         </app-input-field>
                     </div>
                     <div class="col-md-12">
-                        <app-input-field 
-                          [iconName]="'lock'" 
-                          formControlName="password" 
-                          [labelName]="'Password'" 
-                          [type]="'password'" 
-                        >
+                        <app-input-field [iconName]="'lock'" formControlName="password" [labelName]="'Password'"
+                            [type]="'password'">
                         </app-input-field>
                     </div>
                 </div>
@@ -36,5 +27,3 @@
         </div>
     </div>
 </div>
-
-

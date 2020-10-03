@@ -69,14 +69,15 @@ export class RegisterComponent implements OnInit, DoCheck {
   }
 
   onSubmit(): void{
+    console.log(this.isValidForm());
     if (this.isValidForm()){
       console.log('this is in form: ', this.registerForm.value);
     }
   }
 
-  ngDoCheck(): void {
-    this.store.select('isLoggedIn').subscribe( resp => {
-      console.log('this is register component: ', resp);
-    });
-  }
+  // ngDoCheck(): void {
+  //   this.store.select('isLoggedIn').subscribe( resp => {
+  //     console.log('this is register component: ', resp);
+  //   });
+  // }
 }
