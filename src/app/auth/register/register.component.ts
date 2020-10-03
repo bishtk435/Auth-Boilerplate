@@ -19,14 +19,59 @@ export class RegisterComponent implements OnInit, DoCheck {
     password2: '',
   });
 
+  error = {
+     firstName: '',
+     lastName: '',
+     username: '',
+     email: '',
+     password: '',
+     password2: '',
+     dob: '',
+  };
+
   constructor(private fb: FormBuilder,
               private store: Store<{isLoggedIn: boolean}>) { }
 
   ngOnInit(): void {
   }
 
+  isValidForm(): boolean{
+    if (this.registerForm.value.firstName === ''){
+      this.error.firstName = 'First Name Must Should Be Fill';
+      return false;
+    }else if (this.registerForm.value.lastName === ''){
+      this.error.lastName = 'Last Name Must Should Be Fill';
+      return false;
+    }
+    else if (this.registerForm.value.username === ''){
+      this.error.username = 'User Name Must Should Be Fill';
+      return false;
+    }
+    else if (this.registerForm.value.email === ''){
+      this.error.email = 'Email Must Should Be Fill';
+      return false;
+    }
+    else if (this.registerForm.value.password === ''){
+      this.error.password = 'Password Must Should Be Fill';
+      return false;
+    }
+    else if (this.registerForm.value.password2 === ''){
+      this.error.password2 = 'Conform Your Password';
+      return false;
+    }
+    else if (this.registerForm.value.dob === ''){
+      this.error.dob = 'Enter Your Date Of Birth';
+      return false;
+    }
+    else{
+      return  true;
+    }
+  }
+
   onSubmit(): void{
-    console.log('this is in form: ', this.registerForm.value);
+    if (this.isValidForm()){
+      console.log('this is in form: ', this.registerForm.value);
+    }
   }
 
   ngDoCheck(): void {
