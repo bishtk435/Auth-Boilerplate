@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -10,7 +10,7 @@ import { logIn } from '../auth.actions';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit, DoCheck {
+export class LoginComponent implements OnInit {
 
   loginForm = this.fb.group({
     email: this.fb.control('', [Validators.required]),
@@ -28,7 +28,11 @@ export class LoginComponent implements OnInit, DoCheck {
            });
     }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.store.select('isLoggedIn').subscribe(resp => {
+      console.log('this is in sotre: ', resp);
+    });
+   }
 
   onSubmit(): void{
     const payload: object = this.loginForm.value;
@@ -40,9 +44,4 @@ export class LoginComponent implements OnInit, DoCheck {
     this.store.dispatch(logIn({credentials: payload}));
   }
 
-  // ngDoCheck(): void {
-  //   this.store.select('isLoggedIn').subscribe(resp => {
-  //     console.log('this is in sotre: ', resp);
-  //   });
-  // }
 }

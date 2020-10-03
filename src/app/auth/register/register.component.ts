@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 
@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit, DoCheck {
+export class RegisterComponent implements OnInit {
 
   registerForm = this.fb.group({
     firstName: this.fb.control('', [Validators.required]),
@@ -30,7 +30,11 @@ export class RegisterComponent implements OnInit, DoCheck {
   };
 
   constructor(private fb: FormBuilder,
-              private store: Store<{isLoggedIn: boolean}>) { }
+              private store: Store<{isLoggedIn: boolean}>) {
+                this.store.select('isLoggedIn').subscribe( resp => {
+                  console.log('this is register component: ', resp);
+                });
+               }
 
   ngOnInit(): void {
   }
@@ -75,9 +79,4 @@ export class RegisterComponent implements OnInit, DoCheck {
     }
   }
 
-  // ngDoCheck(): void {
-  //   this.store.select('isLoggedIn').subscribe( resp => {
-  //     console.log('this is register component: ', resp);
-  //   });
-  // }
 }
