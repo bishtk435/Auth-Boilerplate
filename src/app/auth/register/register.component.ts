@@ -79,4 +79,8 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  onfocus(): any {
+   console.log('focus call');
+  }
+
 }
