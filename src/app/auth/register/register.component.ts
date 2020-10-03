@@ -79,8 +79,8 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  onfocus(): any {
-   console.log('focus call');
+  onfocus = (controlName): any => {
+    this.error[controlName] = '';
   }
 
 }

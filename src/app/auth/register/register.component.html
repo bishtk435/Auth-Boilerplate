@@ -1,24 +1,24 @@
 <div class="container">
     <h1>Register Here...</h1>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" autocomplete="off">
         <div class="row w-100 d-flex">
             <div class="col-md-6 col-sm-12">
-                <app-input-field [labelName]="'First Name'" formControlName="firstName" [iconName]="'person'" [type]="'text'">
+                <app-input-field [onTyping]="onfocus" [controlName]="'firstName'" [labelName]="'First Name'" formControlName="firstName" [iconName]="'person'" [type]="'text'">
                 </app-input-field>
                 <span class="error">{{error.firstName}}</span>
             </div>
             <div class="col-md-6 col-sm-12">
-                <app-input-field [labelName]="'Last Name'" formControlName="lastName" [iconName]="'person'" [type]="'text'">
+                <app-input-field [onTyping]="onfocus" [controlName]="'lastName'" [labelName]="'Last Name'" formControlName="lastName" [iconName]="'person'" [type]="'text'">
                 </app-input-field>
                 <span class="error">{{error.lastName}}</span>
             </div>
             <div class="col-md-12 col-sm-12">
-                <app-input-field [labelName]="'Username'" formControlName="username" [iconName]="'person'" [type]="'text'">
+                <app-input-field [onTyping]="onfocus" [controlName]="'username'" [labelName]="'Username'" formControlName="username" [iconName]="'person'" [type]="'text'">
                 </app-input-field>
                 <span class="error">{{error.username}}</span>
             </div>
             <div class="col-md-12 col-sm-12">
-                <app-input-field [labelName]="'Email'" formControlName="email" [iconName]="'email'" [type]="'email'">
+                <app-input-field [onTyping]="onfocus" [controlName]="'email'" [labelName]="'Email'" formControlName="email" [iconName]="'email'" [type]="'email'">
                 </app-input-field>
                 <span class="error">{{error.email}}</span>
             </div>
@@ -27,17 +27,17 @@
                 <app-radio name="Female" value="Female" style="display: inline-block;"></app-radio>
             </div>
             <div class="col-md-6 col-sm-12">
-                <app-input-field formControlName="dob" [labelName]="'DOB'" [iconName]="'person'" [type]="'text'">
+                <app-input-field [onTyping]="onfocus" [controlName]="'dob'" formControlName="dob" [labelName]="'DOB'" [iconName]="'person'" [type]="'text'">
                 </app-input-field>
                 <span class="error">{{error.dob}}</span>
             </div>
             <div class="col-md-6 col-sm-12">
-                <app-input-field [labelName]="'Password'" formControlName="password" [iconName]="'lock'" [type]="'password'">
+                <app-input-field [onTyping]="onfocus" [controlName]="'password'" [labelName]="'Password'" formControlName="password" [iconName]="'lock'" [type]="'password'">
                 </app-input-field>
                 <span class="error">{{error.password}}</span>
             </div>
             <div class="col-md-6 col-sm-12">
-                <app-input-field formControlName="password2" [labelName]="'Conform Password'" [iconName]="'lock'" [type]="'password'" >
+                <app-input-field [onTyping]="onfocus" [controlName]="'password2'" formControlName="password2" [labelName]="'Conform Password'" [iconName]="'lock'" [type]="'password'" >
                 </app-input-field>
                 <span class="error">{{error.password2}}</span>
             </div>

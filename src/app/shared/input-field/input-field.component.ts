@@ -18,6 +18,8 @@ export class InputFieldComponent implements OnInit, AfterContentChecked {
   @Input() type: string;
   @Input() labelName: string;
   @Input() iconName: string;
+  @Input() controlName: string;
+  @Input() onTyping: (field) => {};
 
 
   fieldValue = '';

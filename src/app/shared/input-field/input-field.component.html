@@ -3,6 +3,6 @@
         <mat-label class="mtlabel">
             <mat-icon class="myicon">{{iconName}}</mat-icon>&nbsp;{{labelName}}
         </mat-label>
-        <input matInput [type]="type" [(ngModel)]="fieldValue"  required>
+        <input matInput [type]="type" [(ngModel)]="fieldValue" (focus)="onTyping(controlName)" required>
     </mat-form-field>
 </div>
