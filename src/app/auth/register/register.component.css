@@ -26,3 +26,6 @@ img{
 .ng-invalid:not(form) {
     color: red;
 }
+.error{
+    color: red;
+}

@@ -75,6 +75,9 @@ export class RegisterComponent implements OnInit, DoCheck {
     }
   }
 
+  onfocus(): any {
+   console.log('focus call')
+  }
   // ngDoCheck(): void {
   //   this.store.select('isLoggedIn').subscribe( resp => {
   //     console.log('this is register component: ', resp);
