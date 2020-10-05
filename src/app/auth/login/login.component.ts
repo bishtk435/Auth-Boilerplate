@@ -29,19 +29,15 @@ export class LoginComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.store.select('isLoggedIn').subscribe(resp => {
-      console.log('this is in sotre: ', resp);
-    });
    }
 
   onSubmit(): void{
     const payload: object = this.loginForm.value;
-    console.log('this is form status: ', this.loginForm);
+   // console.log('this is form status: ', this.loginForm);
     if (this.loginForm.status === 'INVALID'){
       alert('Form is invalid');
       return ;
     }
     this.store.dispatch(logIn({credentials: payload}));
   }
-
 }

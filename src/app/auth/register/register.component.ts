@@ -60,7 +60,7 @@ export class RegisterComponent implements OnInit {
       return false;
     }
     else if (this.registerForm.value.password2 === ''){
-      this.error.password2 = 'Conform Your Password';
+      this.error.password2 = 'Confirm Your Password';
       return false;
     }
     else if (this.registerForm.value.dob === ''){
